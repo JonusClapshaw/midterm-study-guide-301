@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Practice {
     /**
@@ -40,7 +42,12 @@ public class Practice {
         return word;
     }
 
-    
+    public static String differenceInNandM(HashSet<String> words, String n, String  m) {
+        
+        
+
+        return "This many words greater than " + n + ". This many words less than " + m + ".";
+    }
     // TODO: Implement the other methods from the study guide AND tests for each one
 
     // For each method you are only required to implement it for one of the data
