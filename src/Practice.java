@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -6,11 +8,39 @@ public class Practice {
      * @return the difference between the largest and smallest number
      */
     public static int maxDiff(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int lowest = Integer.MAX_VALUE;
+        int diff = 0;
+
+        for(int i = 0; i < nums.length; i++)
+        {
+            if(nums[i] < lowest)
+            {
+                lowest = nums[i];
+            } else if(nums[i] > max) {
+                max = nums[i];
+            }
+
+            diff = max - lowest;
+        }
+        
         // TODO: implement this
-        return -1;
+        return diff;
     }
 
+    public static String longestWord(ArrayList<String> words, char target){
+        String word = "";
 
+        for (String string : words) {
+            if(string.length() > word.length() && string.charAt(0) == target){
+                word = string;
+            }
+        }
+
+        return word;
+    }
+
+    
     // TODO: Implement the other methods from the study guide AND tests for each one
 
     // For each method you are only required to implement it for one of the data
