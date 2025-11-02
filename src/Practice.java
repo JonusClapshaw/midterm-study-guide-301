@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
 public class Practice {
     /**
@@ -42,11 +43,17 @@ public class Practice {
         return word;
     }
 
-    public static String differenceInNandM(HashSet<String> words, String n, String  m) {
-        
-        
+    public static int differenceInNandM(Set<String> words, int n, int m) {
+        int diff = 0;
 
-        return "This many words greater than " + n + ". This many words less than " + m + ".";
+        for (String string : words) {
+            if(string.length() > n && string.length() < m)
+            {
+                diff++;
+            }
+        }
+
+        return diff;
     }
     // TODO: Implement the other methods from the study guide AND tests for each one
 

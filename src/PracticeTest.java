@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
+import java.util.Set;
+import java.util.HashSet;
 
 public class PracticeTest {
 
@@ -35,7 +37,19 @@ public class PracticeTest {
         assertEquals("hello", result);
     }
 
-    
+    @Test
+    void testDifferenceInNandM(){
+        Set<String> words = new HashSet<>();
+        words.add("string");
+        words.add("another");
+        words.add("greatest");
+        words.add("i");
+        words.add("makebelivetestword");
+
+        int diff = Practice.differenceInNandM(words, 1, 9);
+
+        assertEquals(3, diff);
+    }
     // TODO: Make tests for each problem you solve
     
 }
