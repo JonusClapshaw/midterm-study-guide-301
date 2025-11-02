@@ -55,6 +55,35 @@ public class Practice {
 
         return diff;
     }
+
+    public static int evenOdd(HashMap<Integer, Integer> count) 
+    {
+        int countEven = 0;
+
+        for (int num : count.values()) {
+            if(num % 2 == 0){
+                countEven++;
+            }
+        }
+
+        return count.size() - countEven;
+    }
+
+    public static int secondLarge(HashMap<Integer, Integer> count){
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for (int num : count.keySet()) {
+            if(num > largest){
+                second = largest;
+                largest = num;
+            } else if(num > second && num != largest) {
+                second = num;
+            }
+        }
+
+        return second;
+    }
     // TODO: Implement the other methods from the study guide AND tests for each one
 
     // For each method you are only required to implement it for one of the data

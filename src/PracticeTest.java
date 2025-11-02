@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+
 import org.junit.jupiter.api.Test;
 import java.util.Set;
 import java.util.HashSet;
@@ -50,7 +52,35 @@ public class PracticeTest {
 
         assertEquals(3, diff);
     }
+
+    @Test
+    void testoddEven(){
+        HashMap<Integer, Integer> nums = new HashMap<>();
+
+        for(int i = 0; i < 10; i++)
+        {
+            nums.put(i, i);
+        }
+
+        int diff = Practice.evenOdd(nums);
+
+        assertEquals(5, diff);
+    }
     // TODO: Make tests for each problem you solve
+
+    @Test
+    void testSecondLargest(){
+        HashMap<Integer, Integer> nums = new HashMap<>();
+
+        for(int i = 0; i < 10; i++)
+        {
+            nums.put(i, i);
+        }
+
+        int second = Practice.secondLarge(nums);
+
+        assertEquals(8, second);
+    }
     
 }
 
